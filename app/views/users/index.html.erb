@@ -1,2 +1,9 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<section class="users_container">
+  <ul class="users_list">
+    <% @users.each do |user| %>
+      <li class="user_item">
+        <%= render partial: 'user', locals: { user: user } %>
+      </li>
+    <% end %>
+  </ul>
+</section>
