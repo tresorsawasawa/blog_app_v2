@@ -1,0 +1,81 @@
+@import '../../base/*';
+
+.users_container {
+  position: relative;
+
+  .users_list {
+    @include flex_center_center(column);
+
+    padding: 0 1rem;
+    gap: 1.5rem;
+
+    .user_item {
+      width: 90%;
+
+      .user_block {
+        width: 100%;
+        gap: 1.3rem;
+        justify-content: space-between;
+        row-gap: 10px;
+        align-items: center;
+        background: $cardBgColor;
+        box-shadow: $mainCardsShadow;
+        border-radius: 10px;
+        padding: 0.5rem;
+
+        &:hover {
+          background: $cardHoverColor;
+          box-shadow: 1px 4px 4px rgba(85, 85, 114, 0.549);
+          transition: 0.3s ease;
+        }
+
+        .user_image_container {
+          @include flex_center_center(row);
+
+          width: 100px;
+          height: 100px;
+
+          .user_photo {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            align-self: center;
+          }
+        }
+
+        .user_text {
+          display: flex;
+          justify-content: space-between;
+          width: 90%;
+          gap: 2rem;
+          border-radius: 10px;
+          height: 100px;
+          padding: 0.5rem 1rem;
+
+          .user_name {
+            align-self: flex-start;
+            color: $blackColor;
+
+            &:hover {
+              color: $primaryColor;
+              cursor: pointer;
+              transform: scale(1.08);
+            }
+
+            &:active {
+              color: $primaryColor;
+            }
+          }
+
+          .user_posts {
+            align-self: flex-end;
+
+            small {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
