@@ -1,11 +1,58 @@
+@import './variables';
+@import './colors';
+@import url($urlPoppinsFont);
+
+/* Default styling to be applied to the whole application start */
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   list-style: none;
+  box-sizing: border-box;
+  font-family: $poppinsFont;
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.685);
-  color: white;
+  background: $bodyColor;
 }
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 4rem 0 2rem;
+}
+
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.btn {
+  padding: 0.6rem;
+  background: $gradientColor;
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background: $secondColor;
+  }
+}
+
+input {
+  font-size: 100%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* Default styling to be applied to the whole application end */
